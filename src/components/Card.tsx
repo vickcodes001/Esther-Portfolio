@@ -1,0 +1,67 @@
+import React from "react";
+import { Check, Redirect } from "../assets";
+
+/**
+ * Tag interface for project features/technologies
+ */
+interface Tag {
+  label: string;
+}
+
+/**
+ * ProjectCard Props Interface
+ */
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+  link?: string;
+}
+
+const Card: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  tags,
+  image,
+  link = "#", // Default to # if no link provided
+}) => {
+  return (
+    <div className="bg-[#FCFCFC] border border-[#EDEDED] px-5 pt-8 rounded-2xl h-full flex flex-col">
+      {/* Project Title */}
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 mb-2 hover:opacity-80 transition-opacity w-fit"
+      >
+        <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+        <img src={Redirect} alt="Visit project" className="w-4 h-4" />
+      </a>
+
+      {/* Project Description */}
+      <p className="text-[#121212] text-sm md:text-base mb-4 leading-relaxed">
+        {description}
+      </p>
+
+      {/* Project Tags */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4.75">
+        {tags.map((tag, index) => (
+          <div key={index} className="flex items-center gap-2">
+            <img src={Check} alt="" className="w-4 h-4 flex-shrink-0" />
+            <span className="text-[12px] md:text-sm text-[#525866]">
+              {tag.label}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Project Image - pushed to bottom with mt-auto */}
+      <div className="flex items-end w-full overflow-hidden mt-auto">
+        <img src={image} alt={title} className="w-full h-auto object-cover" />
+      </div>
+    </div>
+  );
+};
+
+export default Card;

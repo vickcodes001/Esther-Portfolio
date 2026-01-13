@@ -1,0 +1,51 @@
+.scroll-row-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 1rem;
+  height: 360px;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+  cursor: grab;
+  user-select: none;
+}
+
+.scroll-row.reverse {
+  animation: scroll-right 20s linear infinite;
+}
+
+.scroll-row:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile speed adjustment */
+@media (max-width: 768px) {
+  .scroll-row {
+    animation-duration: 30s;
+  }
+  .scroll-row.reverse {
+    animation-duration: 30s;
+  }
+}
