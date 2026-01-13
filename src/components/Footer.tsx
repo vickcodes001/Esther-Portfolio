@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="absolute bottom-10 left-[50%] -translate-x-1/2">
             <p className="text-[#525866] text-sm whitespace-nowrap">
               © 2025 All rights reserved
             </p>

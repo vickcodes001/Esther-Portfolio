@@ -1,16 +1,10 @@
 import React from "react";
 import { Check, Redirect } from "../assets";
 
-/**
- * Tag interface for project features/technologies
- */
 interface Tag {
   label: string;
 }
 
-/**
- * ProjectCard Props Interface
- */
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -24,7 +18,7 @@ const Card: React.FC<ProjectCardProps> = ({
   description,
   tags,
   image,
-  link = "#", // Default to # if no link provided
+  link = "#",
 }) => {
   return (
     <div className="bg-[#FCFCFC] border border-[#EDEDED] px-5 pt-8 rounded-2xl h-full flex flex-col">
@@ -48,7 +42,7 @@ const Card: React.FC<ProjectCardProps> = ({
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4.75">
         {tags.map((tag, index) => (
           <div key={index} className="flex items-center gap-2">
-            <img src={Check} alt="" className="w-4 h-4 flex-shrink-0" />
+            <img src={Check} alt="" className="w-4 h-4 shrink-0" />
             <span className="text-[12px] md:text-sm text-[#525866]">
               {tag.label}
             </span>
