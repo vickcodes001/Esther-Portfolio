@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Resume } from "../assets";
 
-// Navigation links data
 const navLinks = [
   { id: 1, label: "Projects", path: "/projects" },
   { id: 2, label: "About Me", path: "/about" },
@@ -8,26 +8,19 @@ const navLinks = [
   { id: 4, label: "Contact Me", path: "/contact" },
 ];
 
-/**
- * NavBar Component with Mobile Menu
- * Displays a fixed navbar with hamburger menu for mobile devices
- */
 const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  /**
-   * Toggle mobile menu open/closed
-   */
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  /**
-   * Close menu when a link is clicked
-   */
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const RESUME_PDF_URL =
+    "https://docs.google.com/document/d/1eF0ar93Cs2eiaOac0MjdqsOxK1kNBsTeFF3MgK7DTtY/export?format=pdf";
 
   return (
     <div className="relative">
@@ -61,22 +54,13 @@ const NavBar: React.FC = () => {
 
             {/* Resume Button */}
             <a
-              href="/resume"
-              className="flex items-center gap-2 bg-emerald-900 text-white px-6 py-3 rounded-2xl hover:bg-emerald-800 transition-colors shadow-sm"
+              href={RESUME_PDF_URL}
+              download="Onyewuchi_Esther_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-emerald-900 text-white px-6 py-3 rounded-2xl hover:bg-emerald-800 transition-colors shadow-sm animate-pulse"
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
+              <img src={Resume} alt="" />
               My Resume
             </a>
           </div>
@@ -165,23 +149,14 @@ const NavBar: React.FC = () => {
 
               {/* Resume Button */}
               <a
-                href="/resume"
+                href={RESUME_PDF_URL}
+                download="Onyewuchi_Esther_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={closeMenu}
                 className="flex items-center justify-center gap-2 bg-emerald-900 text-white px-6 py-4 rounded-2xl hover:bg-emerald-800 transition-colors shadow-sm w-full"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
+                <img src={Resume} alt="" />
                 My Resume
               </a>
             </div>

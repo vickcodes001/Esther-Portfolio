@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Check, Redirect } from "../assets";
 
 interface Tag {
@@ -10,7 +11,7 @@ interface ProjectCardProps {
   description: string;
   tags: Tag[];
   image: string;
-  link?: string;
+  link: string;
 }
 
 const Card: React.FC<ProjectCardProps> = ({
@@ -18,20 +19,18 @@ const Card: React.FC<ProjectCardProps> = ({
   description,
   tags,
   image,
-  link = "#",
+  link,
 }) => {
   return (
     <div className="bg-[#FCFCFC] border border-[#EDEDED] px-5 pt-8 rounded-2xl h-full flex flex-col">
       {/* Project Title */}
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to={link}
         className="flex items-center gap-2 mb-2 hover:opacity-80 transition-opacity w-fit"
       >
         <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
         <img src={Redirect} alt="Visit project" className="w-4 h-4" />
-      </a>
+      </Link>
 
       {/* Project Description */}
       <p className="text-[#121212] text-sm md:text-base mb-4 leading-relaxed">
@@ -50,7 +49,7 @@ const Card: React.FC<ProjectCardProps> = ({
         ))}
       </div>
 
-      {/* Project Image - pushed to bottom with mt-auto */}
+      {/* Project Image */}
       <div className="flex items-end w-full overflow-hidden mt-auto">
         <img src={image} alt={title} className="w-full h-auto object-cover" />
       </div>

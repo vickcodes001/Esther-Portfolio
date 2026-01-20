@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const experience = [
   {
     id: 1,
@@ -27,13 +29,29 @@ const experience = [
 
 const Experience = () => {
   return (
-    <div className="max-w-360 mx-auto px-4 md:px-20 pb-15">
-      <h3 className="text-[#20232D] font-reem text-[32px] font-semibold mb-8">
+    <section className="max-w-360 mx-auto px-4 md:px-20 pb-15">
+      {/* Title */}
+      <motion.h3
+        className="text-[#20232D] font-reem text-[32px] font-semibold mb-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         Work Experience
-      </h3>
+      </motion.h3>
+
+      {/* Experience Items */}
       <div className="flex flex-col gap-16">
         {experience.map((exp, i) => (
-          <div key={i} className="flex flex-col gap-2">
+          <motion.div
+            key={exp.id}
+            className="flex flex-col gap-2"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.15 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="flex justify-between mb-4">
               <div className="flex flex-col gap-1">
                 <p className="text-[#20232D] text-[20px] font-semibold">
@@ -43,11 +61,12 @@ const Experience = () => {
               </div>
               <p className="text-[#31353F]">{exp.date}</p>
             </div>
+
             <p className="text-[#20232D]">{exp.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

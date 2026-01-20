@@ -9,6 +9,9 @@ import HeyIcon from "./hey-icon.svg";
 import MailIcon from "./mail-icon.svg";
 import ProjectIcon from "./project-icon.svg";
 import HamburgerIcon from "./hamburger-icon.svg";
+import ArrowBack from "./arrow-back.svg";
+import TopRight from "./arrow-top-right.svg";
+import TranzaktLogo from "./tranzakt-icon.svg";
 
 export {
   Check,
@@ -22,4 +25,7 @@ export {
   MailIcon,
   ProjectIcon,
   HamburgerIcon,
+  ArrowBack,
+  TopRight,
+  TranzaktLogo,
 };

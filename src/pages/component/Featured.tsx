@@ -1,8 +1,10 @@
 import Card from "../../components/Card";
+import { motion } from "motion/react";
 
 const projects = [
   {
     title: "Tranzakt",
+    link: "/tranzakt",
     description:
       "Tranzakt is a fintech platform built to make payments, settlements, and financial operations easier for growing businesses.",
     tags: [
@@ -16,6 +18,7 @@ const projects = [
   },
   {
     title: "Capalyze",
+    link: "/capalyze",
     description:
       "Capalyze is a product that helps African SMEs prepare for funding by assessing their readiness and connecting them to investors that grows their business.",
     tags: [
@@ -29,6 +32,7 @@ const projects = [
   },
   {
     title: "Paws and Connect",
+    link: "/paws",
     description:
       "A social pet app designed to help pet owners discover nearby playdates, potential mates, and meaningful connections through community-driven interactions",
     tags: [
@@ -42,6 +46,7 @@ const projects = [
   },
   {
     title: "Vuno Socials",
+    link: "/vuno",
     description:
       "Vuno is a social discovery app designed to help people feel connected to what’s happening around them, turning local moments, events, and conversations into shared experiences in real time.",
     tags: [
@@ -56,25 +61,37 @@ const projects = [
 ];
 
 const Featured: React.FC = () => {
-  // Project data array
-
   return (
     <section className="max-w-360 mx-auto px-4 md:px-20 py-20">
       {/* Section Title */}
-      <h2 className="text-4xl font-reem font-semibold text-gray-900 mb-5 md:mb-12">
+      <motion.h2
+        className="text-4xl font-reem font-semibold text-gray-900 mb-5 md:mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         Featured Projects
-      </h2>
+      </motion.h2>
 
       {/* Projects Grid */}
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <Card
+          <motion.div
             key={index}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            image={project.image}
-          />
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.15 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Card
+              title={project.title}
+              link={project.link}
+              description={project.description}
+              tags={project.tags}
+              image={project.image}
+            />
+          </motion.div>
         ))}
       </div>
     </section>
