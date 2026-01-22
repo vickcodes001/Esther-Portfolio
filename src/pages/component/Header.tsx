@@ -49,20 +49,15 @@ const Header = () => {
         transition={{ duration: 1, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <motion.button
-          onClick={() =>
-            window.open(
-              "https://mail.google.com/mail/?view=cm&fs=1&to=estheronyewuchi2340@gmail.com",
-              "_blank",
-            )
-          }
+        <motion.a
+          href="mailto:estheronyewuchi2340@gmail.com?subject=Hello&body=Hi Esther"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex justify-between bg-[#153B30] text-white px-6 py-3 w-41.25 rounded-2xl cursor-pointer"
+          className="flex items-center gap-2 bg-[#153B30] text-white px-6 py-3 rounded-2xl cursor-pointer"
         >
-          <img src={MailIcon} alt="" />
+          <img src={MailIcon} alt="Mail" />
           Contact Me
-        </motion.button>
+        </motion.a>
 
         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <a

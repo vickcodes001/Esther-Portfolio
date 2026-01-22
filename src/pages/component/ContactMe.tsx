@@ -16,13 +16,8 @@ const ContactMe: React.FC = () => {
           <h3>Let's talk about designing a solution</h3>
         </div>
 
-        <motion.div
-          onClick={() =>
-            window.open(
-              "https://mail.google.com/mail/?view=cm&fs=1&to=estheronyewuchi2340@gmail.com",
-              "_blank",
-            )
-          }
+        <motion.a
+          href="mailto:estheronyewuchi2340@gmail.com?subject=Hello&body=Hi Esther"
           className="flex flex-col items-start justify-center gap-1 py-7 px-4 bg-[#153B30] text-white rounded-2xl transition-colors cursor-pointer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -31,7 +26,7 @@ const ContactMe: React.FC = () => {
           <span className="text-[21px] md:text-[26px] font-semibold">
             estheronyewuchi2340@gmail.com
           </span>
-        </motion.div>
+        </motion.a>
       </motion.div>
     </section>
   );
