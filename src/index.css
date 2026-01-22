@@ -13,3 +13,7 @@ body {
 .font-reem {
   font-family: "Reem Kufi Fun", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

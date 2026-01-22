@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const projects = [
   {
     title: "Tranzakt",
-    link: "/tranzakt",
+    link: "/",
     description:
       "Tranzakt is a fintech platform built to make payments, settlements, and financial operations easier for growing businesses.",
     tags: [
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: "Capalyze",
-    link: "/capalyze",
+    link: "/",
     description:
       "Capalyze is a product that helps African SMEs prepare for funding by assessing their readiness and connecting them to investors that grows their business.",
     tags: [
@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: "Paws and Connect",
-    link: "/paws",
+    link: "/",
     description:
       "A social pet app designed to help pet owners discover nearby playdates, potential mates, and meaningful connections through community-driven interactions",
     tags: [
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Vuno Socials",
-    link: "/vuno",
+    link: "/",
     description:
       "Vuno is a social discovery app designed to help people feel connected to what’s happening around them, turning local moments, events, and conversations into shared experiences in real time.",
     tags: [
@@ -62,7 +62,7 @@ const projects = [
 
 const Featured: React.FC = () => {
   return (
-    <section className="max-w-360 mx-auto px-4 md:px-20 py-20">
+    <section id="feature" className="max-w-360 mx-auto px-4 md:px-20 py-20">
       {/* Section Title */}
       <motion.h2
         className="text-4xl font-reem font-semibold text-gray-900 mb-5 md:mb-12"

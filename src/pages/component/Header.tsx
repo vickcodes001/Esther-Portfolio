@@ -50,6 +50,12 @@ const Header = () => {
         viewport={{ once: true }}
       >
         <motion.button
+          onClick={() =>
+            window.open(
+              "https://mail.google.com/mail/?view=cm&fs=1&to=estheronyewuchi2340@gmail.com",
+              "_blank",
+            )
+          }
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex justify-between bg-[#153B30] text-white px-6 py-3 w-41.25 rounded-2xl cursor-pointer"
@@ -58,13 +64,14 @@ const Header = () => {
           Contact Me
         </motion.button>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex justify-between bg-[#F6F8FA] border border-[#E2E4E9] px-6 py-3 w-44.75 rounded-2xl cursor-pointer"
-        >
-          <img src={ProjectIcon} alt="" />
-          View Projects
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <a
+            href="#feature"
+            className="flex justify-between bg-[#F6F8FA] border border-[#E2E4E9] px-6 py-3 w-44.75 rounded-2xl cursor-pointer"
+          >
+            <img src={ProjectIcon} alt="" />
+            View Projects
+          </a>
         </motion.button>
       </motion.div>
     </section>
