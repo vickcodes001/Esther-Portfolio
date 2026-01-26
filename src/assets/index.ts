@@ -12,6 +12,8 @@ import HamburgerIcon from "./hamburger-icon.svg";
 import ArrowBack from "./arrow-back.svg";
 import TopRight from "./arrow-top-right.svg";
 import TranzaktLogo from "./tranzakt-icon.svg";
+import TranzaktBgOne from "./transakt-bg-1.svg";
+import TranzaktBgTwo from "./transakt-bg-2.svg";
 
 export {
   Check,
@@ -28,4 +30,6 @@ export {
   ArrowBack,
   TopRight,
   TranzaktLogo,
+  TranzaktBgOne,
+  TranzaktBgTwo,
 };

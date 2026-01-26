@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="relative">
       {/* Main Navbar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[90%] max-w-7xl bg-white/80 backdrop-blur-md border border-[#F6F8FA] rounded-[48px] shadow-sm">
+      <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[90%] max-w-7xl bg-white/80 backdrop-blur-md border border-[#F6F8FA] rounded-[48px] shadow-sm">
         <div className="flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <a
@@ -98,7 +98,7 @@ const NavBar: React.FC = () => {
           />
 
           {/* Mobile Menu Panel */}
-          <div className="fixed top-6 right-[5%] z-50 w-[90%] max-w-md bg-white rounded-3xl shadow-2xl md:hidden animate-in slide-in-from-top-4 duration-300">
+          <div className="fixed top-2 z-50 w-[95%] left-2.5 max-w-md bg-white rounded-3xl shadow-2xl md:hidden animate-in slide-in-from-top-4 duration-300">
             <div className="p-8">
               {/* Header with Logo and Close Button */}
               <div className="flex items-center justify-between mb-12">

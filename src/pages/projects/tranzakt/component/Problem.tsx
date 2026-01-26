@@ -1,41 +1,60 @@
+import { TranzaktBgOne, TranzaktBgTwo } from "../../../../assets";
+import { motion } from "motion/react";
+
 const Problem = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto pt-16 md:pt-0 md:py-16 px-4 lg:px-8">
       {/* Header */}
-      <div className="mb-12">
-        <h3 className="text-4xl font-bold text-gray-900 mb-6">The Problem</h3>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-5xl">
+      <motion.div
+        className="mb-8"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-[28px] md:text-4xl text-gray-900 font-semibold font-reem b-6 mb-5">
+          The Problem
+        </h3>
+        <p className="text-gray-700 leading-relaxed">
           Merchants struggled to complete onboarding because the KYC process
           treated all businesses the same. Starter businesses and registered
           businesses were forced through a single, rigid flow, leading to
           confusion, incomplete submissions, and delays in account activation.
           This slowed merchant acquisition and increased admin review time.
         </p>
-      </div>
+      </motion.div>
 
       {/* Image Container */}
-      <div
-        className="relative flex bg-green-400 rounded-3xl p-8 md:p-12 bg-cover bg-center"
+      <motion.div
+        className="relative flex bg-green-400 rounded-3xl p-3 md:p-9.5 bg-cover bg-center w-full"
         style={{ backgroundImage: `url('')` }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <img
-            src=""
-            alt="KYC Screenshot 1"
-            className="w-full rounded-lg shadow-xl"
-          />
-          <img
-            src=""
-            alt="KYC Screenshot 2"
-            className="w-full rounded-lg shadow-xl"
-          />
-          <img
-            src=""
-            alt="KYC Screenshot 3"
-            className="w-full rounded-lg shadow-xl"
-          />
+        <img src={TranzaktBgOne} alt="" className="absolute top-0 left-[27%]" />
+        <img src={TranzaktBgTwo} alt="" className="absolute bottom-0 right-0" />
+        <div className="relative z-2 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
+          {[
+            "/images/tranzakt-problem-1.png",
+            "/images/tranzakt-problem-2.png",
+            "/images/tranzakt-problem-3.png",
+          ].map((src, index) => (
+            <motion.img
+              key={index}
+              src={src}
+              alt={`KYC Screenshot ${index + 1}`}
+              className="w-full rounded-lg shadow-xl"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+            />
+          ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

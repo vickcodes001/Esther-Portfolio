@@ -23,7 +23,7 @@ const ContactMe: React.FC = () => {
           whileTap={{ scale: 0.95 }}
         >
           <span className="text-sm text-white">Send a message</span>
-          <span className="text-[21px] md:text-[26px] font-semibold">
+          <span className="text-[20px] md:text-[26px] font-semibold">
             estheronyewuchi2340@gmail.com
           </span>
         </motion.a>

@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
 
             <div className="flex items-center gap-10">
               <a
-                href="https://behance.net"
+                href="https://estherkamso.hashnode.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,19 +95,23 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/esther-onyewuchi-87319823a/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img src={LinkedIn} alt="LinkedIn" />
               </a>
 
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://x.com/kamso027?s=21"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={Twitter} alt="X (Twitter)" />
               </a>
 
               <a
-                href="https://dribbble.com"
+                href="https://dribbble.com/estherkamso"
                 target="_blank"
                 rel="noopener noreferrer"
               >

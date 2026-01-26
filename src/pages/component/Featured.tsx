@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const projects = [
   {
     title: "Tranzakt",
-    link: "/",
+    link: "/tranzakt",
     description:
       "Tranzakt is a fintech platform built to make payments, settlements, and financial operations easier for growing businesses.",
     tags: [
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: "Capalyze",
-    link: "/",
+    link: "/capalyze",
     description:
       "Capalyze is a product that helps African SMEs prepare for funding by assessing their readiness and connecting them to investors that grows their business.",
     tags: [

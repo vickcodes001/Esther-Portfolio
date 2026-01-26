@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="w-full max-w-360 mx-auto mt-37 md:mt-50 px-4 md:px-20">
+    <section className="w-full max-w-360 mx-auto mt-32 md:mt-40 px-4 md:px-20">
       <motion.h1
         className="text-[20px] md:text-[32px] pr-12 md:pr-0 font-medium text-[#20232D] leading-normal"
         initial={{ opacity: 0, y: 40 }}
@@ -25,7 +25,7 @@ const Header = () => {
       >
         Hey 👋 <br />I am Onyewuchi Chikamso Esther, a UI UX Designer with over
         2 years experience designing{" "}
-        <span className="relative inline-block h-[1.1em] w-30 md:w-46 overflow-hidden align-baseline top-[0.15em]">
+        <span className="relative inline-block h-[1.2em] md:h-[1.1em] w-30 md:w-46 overflow-hidden align-baseline top-[0.15em]">
           <AnimatePresence mode="wait">
             <motion.span
               key={words[index]}
@@ -53,7 +53,7 @@ const Header = () => {
           href="mailto:estheronyewuchi2340@gmail.com?subject=Hello&body=Hi Esther"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 bg-[#153B30] text-white px-6 py-3 rounded-2xl cursor-pointer"
+          className="flex items-center justify-between bg-[#153B30] text-white w-44.75 px-6 py-3 rounded-2xl cursor-pointer"
         >
           <img src={MailIcon} alt="Mail" />
           Contact Me
