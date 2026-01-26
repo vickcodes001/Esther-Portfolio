@@ -40,6 +40,7 @@ const Header = () => {
         <div className="flex justify-between items-start">
           <h3 className="text-[#20232D] text-2xl md:text-[48px]">Tranzakt</h3>
           <motion.button
+            onClick={() => window.open("https://tranzakt.finance/", "_blank")}
             className="flex items-center justify-center gap-4 bg-[#153B30] rounded-[10px] text-white p-2.5 w-10 md:w-40 h-10 md:p md:py-6 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
