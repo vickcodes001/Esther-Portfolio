@@ -3,16 +3,16 @@ import { motion } from "motion/react";
 
 const Problem = () => {
   return (
-    <div className="max-w-7xl mx-auto pt-16 md:pt-0 md:py-16 px-4 lg:px-8">
+    <div className="max-w-7xl mx-auto pt-16 md:py-16 px-4 lg:px-0">
       {/* Header */}
       <motion.div
-        className="mb-8"
+        className="mb-8 md:px-15"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h3 className="text-[28px] md:text-4xl text-gray-900 font-semibold font-reem b-6 mb-5">
+        <h3 className="text-[28px] md:text-[32px] text-gray-900 font-semibold font-reem b-6 mb-3 py-2 border border-transparent border-b-[#F6F8FA]">
           The Problem
         </h3>
         <p className="text-gray-700 leading-relaxed">
@@ -26,7 +26,7 @@ const Problem = () => {
 
       {/* Image Container */}
       <motion.div
-        className="relative flex bg-green-400 rounded-3xl p-3 md:p-9.5 bg-cover bg-center w-full"
+        className="relative flex bg-green-400 rounded-2xl p-3 md:p-9.5 bg-cover bg-center w-full"
         style={{ backgroundImage: `url('')` }}
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}

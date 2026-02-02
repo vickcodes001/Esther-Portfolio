@@ -1,4 +1,3 @@
-import { TranzaktBgOne, TranzaktBgTwo } from "../../../../assets";
 import { motion } from "motion/react";
 
 const Solution = () => {
@@ -12,7 +11,7 @@ const Solution = () => {
     <div className="max-w-7xl mx-auto py-16 px-4 lg:px-0">
       {/* Header */}
       <motion.div
-        className="mb-12 md:px-15"
+        className="mb-6 md:px-15"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -50,27 +49,32 @@ const Solution = () => {
 
       {/* Image Container */}
       <motion.div
-        className="relative flex bg-[#F7F7F7] rounded-2xl p-3 md:py-13 bg-cover bg-center w-full"
+        className="relative flex flex-col md:flex-row gap-7 bg-cover bg-center w-full"
         style={{ backgroundImage: `url('')` }}
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <img src={TranzaktBgOne} alt="" className="absolute top-0 left-[27%]" />
-        <img src={TranzaktBgTwo} alt="" className="absolute bottom-0 right-0" />
-        <div className="relative w-191 mx-auto z-2">
+        {/* <div className="relative w-191 mx-auto z-2"> */}
+        {[
+          "/images/vuno-context-mobile.png",
+          "/images/vuno-solution-2.png",
+          "/images/vuno-solution-3.png",
+        ].map((src, index) => (
           <motion.img
-            src="/images/tranzakt-8.png"
-            alt="KYC Screenshot 1"
-            className="w-full object-cover rounded-lg shadow-xl"
+            key={index}
+            src={src}
+            alt={`KYC Screenshot ${index + 1}`}
+            className="w-98 shadow-xl bg-black rounded-2xl md:px-9.5 p-3 md:py-8.5 border"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.4 + index * 0.15 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           />
-        </div>
+        ))}
+        {/* </div> */}
       </motion.div>
     </div>
   );

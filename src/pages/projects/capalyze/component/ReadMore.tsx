@@ -3,21 +3,21 @@ import { motion } from "motion/react";
 const articles = [
   {
     id: 1,
+    image: "/images/read-more-tranzakt.png",
+    title: "Tranzakt",
+    description:
+      "Tranzakt is a fintech platform built to make payments, settlements, and financial...",
+    className: "bg-[#01AC4C]",
+    link: "/tranzakt",
+  },
+  {
+    id: 2,
     image: "/images/read-more-vuno.png",
     title: "Vuno Socials",
     description:
       "Vuno is a social discovery app designed to help people feel connected to what's...",
     className: "bg-black",
     link: "/vuno",
-  },
-  {
-    id: 2,
-    image: "/images/read-more-paws.png",
-    title: "Paws and Connect",
-    description:
-      "A social pet app designed to help pet owners discover nearby playdates, potentia...",
-    className: "bg-[#E25A5A]",
-    link: "/paws",
   },
 ];
 
@@ -57,7 +57,7 @@ const ReadMore = () => {
             />
             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black via-black/50 to-transparent p-4 md:p-6">
               <motion.h4
-                className="text-base md:text-lg font-bold text-white"
+                className="text-[13px] md:text-lg font-bold text-white"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.15 }}
@@ -66,7 +66,7 @@ const ReadMore = () => {
                 {article.title}
               </motion.h4>
               <motion.p
-                className="text-xs md:text-sm mt-1 md:mt-2 text-white"
+                className="text-[9px] md:text-sm mt-1 md:mt-2 text-white"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.15 }}

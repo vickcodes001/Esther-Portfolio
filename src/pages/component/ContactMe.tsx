@@ -3,7 +3,10 @@ import { motion } from "motion/react";
 
 const ContactMe: React.FC = () => {
   return (
-    <section className="max-w-360 mx-auto mb-20 md:mb-0 px-4 md:p-20">
+    <section
+      id="contact"
+      className="max-w-360 mx-auto mb-20 md:mb-0 px-4 md:p-20"
+    >
       <motion.div
         className="flex flex-col md:flex-row items-center justify-between gap-8"
         initial={{ opacity: 0, y: 50 }}

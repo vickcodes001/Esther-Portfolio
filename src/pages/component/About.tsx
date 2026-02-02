@@ -17,7 +17,7 @@ const About = () => {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col gap-4">
+        <div id="about" className="flex flex-col gap-4">
           <h3 className="text-[#20232D] text-[32px] font-semibold font-reem">
             About Me
           </h3>
@@ -43,7 +43,7 @@ const About = () => {
           </div>
         </div>
         {/* Process */}
-        <div className="mt-10 text-[#20232D]">
+        <div id="design-process" className="mt-10 text-[#20232D]">
           <h3 className="text-[32px] font-semibold font-reem mb-6">
             My Design Process
           </h3>

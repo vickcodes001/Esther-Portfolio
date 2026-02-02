@@ -14,6 +14,9 @@ import TopRight from "./arrow-top-right.svg";
 import TranzaktLogo from "./tranzakt-icon.svg";
 import TranzaktBgOne from "./transakt-bg-1.svg";
 import TranzaktBgTwo from "./transakt-bg-2.svg";
+import VunoLogo from "./vuno-logo.svg";
+import PawsLogo from "./paws-logo.svg";
+import CapalyzeLogo from "./capalyze-logo.svg";
 
 export {
   Check,
@@ -32,4 +35,7 @@ export {
   TranzaktLogo,
   TranzaktBgOne,
   TranzaktBgTwo,
+  VunoLogo,
+  PawsLogo,
+  CapalyzeLogo,
 };

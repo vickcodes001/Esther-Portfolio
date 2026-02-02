@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Resume } from "../assets";
 
 const navLinks = [
-  { id: 1, label: "Projects", path: "/projects" },
-  { id: 2, label: "About Me", path: "/about" },
-  { id: 3, label: "Design Process", path: "/design-process" },
-  { id: 4, label: "Contact Me", path: "/contact" },
+  { id: 1, label: "Projects", href: "#feature" },
+  { id: 2, label: "About Me", href: "#about" },
+  { id: 3, label: "Design Process", href: "#design-process" },
+  { id: 4, label: "Contact Me", href: "#contact" },
 ];
 
 const NavBar: React.FC = () => {
@@ -45,7 +45,7 @@ const NavBar: React.FC = () => {
             {navLinks.map((link) => (
               <a
                 key={link.id}
-                href={link.path}
+                href={link.href}
                 className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
               >
                 {link.label}
@@ -138,7 +138,7 @@ const NavBar: React.FC = () => {
                 {navLinks.map((link) => (
                   <a
                     key={link.id}
-                    href={link.path}
+                    href={link.href}
                     onClick={closeMenu}
                     className="block text-xl text-gray-900 hover:text-emerald-900 transition-colors"
                   >

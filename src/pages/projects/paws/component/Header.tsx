@@ -1,16 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowBack, TopRight, TranzaktLogo } from "../../../../assets";
+import { ArrowBack, PawsLogo, TopRight } from "../../../../assets";
 import { motion } from "motion/react";
 
 const qualities = [
   {
-    title: "Fintech",
+    title: "UX Strategy",
   },
   {
-    title: "UX Research",
+    title: "UI Design",
   },
   {
-    title: "UX Design",
+    title: "Information Architecture",
+  },
+  {
+    title: "Interaction Design",
   },
 ];
 
@@ -40,23 +43,28 @@ const Header = () => {
       >
         <div className="flex justify-between items-start">
           <h3 className="text-[#20232D] text-2xl md:text-[48px] font-medium">
-            Tranzakt
+            Paws and Connect
           </h3>
           <motion.button
-            onClick={() => window.open("https://tranzakt.finance/", "_blank")}
-            className="flex items-center justify-center gap-4 bg-[#153B30] rounded-[10px] text-white p-2.5 w-10 md:w-40 h-10 md:p md:py-6 cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://www.figma.com/proto/cnWhUH9VTS6eRppId1Bj3k/Paws-and-Connect?page-id=2%3A3&node-id=109-5975&viewport=7039%2C-347%2C0.27&t=Ypuvb9tJ1AFi6ph8-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=109%3A5975&show-proto-sidebar=1",
+                "_blank",
+              )
+            }
+            className="flex items-center justify-center gap-4 bg-[#153B30] rounded-[10px] text-white p-2.5 w-10 md:w-45 h-10 md:p md:py-6 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="hidden md:inline">View Project</span>
+            <span className="hidden md:inline">View Prototype</span>
             <img src={TopRight} />
           </motion.button>
         </div>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mt-2">
           <p className="text-[#20232D] font-medium text-sm md:text-base w-70 md:w-[70%]">
-            Unified payment solution for businesses and individuals
+            Social Pet Community App
           </p>
-          <div className="flex md:justify-end gap-5 md:w-[30%]">
+          <div className="flex md:justify-end gap-5 flex-wrap md:w-[60%]">
             {qualities.map((quality, index) => (
               <motion.p
                 key={index}
@@ -73,27 +81,6 @@ const Header = () => {
         </div>
       </motion.div>
 
-      {/* description */}
-      <motion.div
-        className="flex flex-col gap-5 text-[#20232D] md:px-15"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        <p>
-          Tranzakt is a multi product payments ecosystem built for businesses to
-          collect money, manage settlements, and run financial operations at
-          scale. The products includes; Tranzakt Payment Platform (TPP),
-          Tranzakt Payment Gateway, Bill Payment, Tranzakt Documentation.
-        </p>
-        <p>
-          This case study focuses on the Tranzakt Payment Platform (TPP) and how
-          I redesigned the KYC onboarding experience to reduce friction for
-          merchants while improving compliance clarity for admins.
-        </p>
-      </motion.div>
-
       {/* large icon */}
       <motion.div
         className="flex items-center justify-center w-full h-27 md:h-49.5 rounded-2xl bg-[#F7F7F7]"
@@ -102,7 +89,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <img src={TranzaktLogo} className="w-46 md:w-72.5" />
+        <img src={PawsLogo} className="w-55 md:w-91.25" />
       </motion.div>
     </div>
   );

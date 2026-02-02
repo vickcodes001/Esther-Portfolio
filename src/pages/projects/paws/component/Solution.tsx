@@ -1,18 +1,18 @@
-import { TranzaktBgOne, TranzaktBgTwo } from "../../../../assets";
 import { motion } from "motion/react";
 
 const Solution = () => {
   const listItems = [
-    "A clear business type selection at onboarding",
-    "Tailored document requirements per business type",
-    "Structured document upload with visible verification status for admins",
+    "Pet-first profiles where each pet has its own identity, preferences, and activity",
+    "Direct messaging between pets to support playdates, mating, and social interaction",
+    "Pet-based communities organized by species and interests",
+    "Pawz AI, framed as a companion that offers care tips and guidance for pet owners",
   ];
 
   return (
     <div className="max-w-7xl mx-auto py-16 px-4 lg:px-0">
       {/* Header */}
       <motion.div
-        className="mb-12 md:px-15"
+        className="mb-6 md:px-15"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -41,36 +41,43 @@ const Solution = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          Merchants completed KYC with fewer errors, and admins spent less time
-          clarifying missing documents. The clearer flow supported faster
-          onboarding, contributing to improved merchant conversion during sales
-          and activation.
+          Testing showed stronger emotional engagement when pets were treated as
+          the primary users rather than attachments to owner profiles.
+          Participants found messaging and discovery more intuitive when
+          interactions were framed pet-to-pet.
         </motion.p>
       </motion.div>
 
       {/* Image Container */}
       <motion.div
-        className="relative flex bg-[#F7F7F7] rounded-2xl p-3 md:py-13 bg-cover bg-center w-full"
+        className="relative flex flex-col md:flex-row gap-7 bg-cover bg-center w-full"
         style={{ backgroundImage: `url('')` }}
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <img src={TranzaktBgOne} alt="" className="absolute top-0 left-[27%]" />
-        <img src={TranzaktBgTwo} alt="" className="absolute bottom-0 right-0" />
-        <div className="relative w-191 mx-auto z-2">
-          <motion.img
-            src="/images/tranzakt-8.png"
-            alt="KYC Screenshot 1"
-            className="w-full object-cover rounded-lg shadow-xl"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-          />
-        </div>
+        {/* <div className="relative w-191 mx-auto z-2"> */}
+        {[
+          "/images/paws-solution-one.png",
+          "/images/paws-solution-two.png",
+          "/images/paws-solution-three.png",
+        ].map((src, index) => (
+          <div className="flex justify-center bg-[#E25A5A] mx-auto rounded-2xl w-full py-8">
+            <motion.img
+              key={index}
+              src={src}
+              alt={`paws and connect ${index + 1}`}
+              className="w-79"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+            />
+          </div>
+        ))}
+        {/* </div> */}
       </motion.div>
     </div>
   );

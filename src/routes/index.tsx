@@ -2,9 +2,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import SharedLayout from "../layouts/SharedLayout";
 import LandingPage from "../pages/LandingPage";
 import Tranzakt from "../pages/projects/tranzakt/Tranzakt";
-import Capalyze from "../pages/projects/Capalyze";
-import Paws from "../pages/projects/Paws";
-import Vuno from "../pages/projects/Vuno";
+import Capalyze from "../pages/projects/capalyze/Capalyze";
+import Paws from "../pages/projects/paws/Paws";
+import Vuno from "../pages/projects/vuno/Vuno";
 
 const AppRoutes = () => {
   return (

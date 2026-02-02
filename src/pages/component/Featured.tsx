@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Vuno Socials",
-    link: "/",
+    link: "/vuno",
     description:
       "Vuno is a social discovery app designed to help people feel connected to what’s happening around them, turning local moments, events, and conversations into shared experiences in real time.",
     tags: [
