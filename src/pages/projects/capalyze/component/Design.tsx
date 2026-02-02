@@ -39,7 +39,7 @@ const Design = () => {
             "/images/capalyze-design-two.png",
             "/images/capalyze-design-three.png",
           ].map((src, index) => (
-            <div className="w-91.75 h-65.5">
+            <div className="w-91.7 h-65.5">
               <motion.img
                 key={index}
                 src={src}
